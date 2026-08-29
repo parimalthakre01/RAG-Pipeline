@@ -3,7 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "agent_rag"))
-load_dotenv(dotenv_path=Path(__file__).parent.parent / "agent_rag" / ".env")
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 
 from ma_rag.graph import build_graph
 

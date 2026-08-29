@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from azure_setup import AzureOpenaiEmbeddingClient, AzureOpenaiClient
 from qdrant import QdrantDB
@@ -6,7 +7,7 @@ from rag.hyde import HydeRag
 from rag.iterative import interativeRag
 from rag.step_back import StepBack
 from rag.naive import NaiveRAG
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 
 RAG_MAP = {
     "naive":NaiveRAG, 

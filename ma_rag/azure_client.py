@@ -3,7 +3,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 
-load_dotenv(dotenv_path=Path(__file__).parent.parent / "agent_rag" / ".env")
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 
 
 class AzureOpenaiClient:

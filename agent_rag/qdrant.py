@@ -1,10 +1,11 @@
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 from openai import AzureOpenAI
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 
-load_dotenv()
+load_dotenv(dotenv_path=Path(__file__).parent.parent / ".env")
 
 
 class QdrantDB:
